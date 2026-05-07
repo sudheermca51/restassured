@@ -32,6 +32,7 @@ public class PetStoreTests extends RestLibrary {
 		int expected = 200;
 		int actual = response.getStatusCode();
 		//		String responseBody = response.asPrettyString();
+		System.out.println(response.asPrettyString());
 		System.out.println(response.asString());
 		String actualStatus = com.jayway.jsonpath.JsonPath.read(response.asString(), "$.status");
 		String expectedStatus="placed";
@@ -74,7 +75,8 @@ public class PetStoreTests extends RestLibrary {
 		SoftAssert sa = new SoftAssert();
 		int expected = 200;
 		int actual = response.getStatusCode();
-		//		String responseBody = response.asPrettyString();
+		String responseBody = response.asPrettyString();
+		System.out.println("response body::" + responseBody);
 		System.out.println(response.asString());
 		String actualStatus = com.jayway.jsonpath.JsonPath.read(response.asString(), "$.[0].status");
 		String expectedStatus=petsoldstatus;
@@ -114,7 +116,8 @@ public class PetStoreTests extends RestLibrary {
 		SoftAssert sa = new SoftAssert();
 		int expected = 200;
 		int actual = response.getStatusCode();
-		//		String responseBody = response.asPrettyString();
+		String responseBody = response.asPrettyString();
+		System.out.println("Response Body"+ responseBody);
 		System.out.println(response.asString());
 		String actualStatus = com.jayway.jsonpath.JsonPath.read(response.asString(), "$.[0].status");
 		String expectedStatus=petpendingstatus;

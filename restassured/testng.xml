@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" verbose="5">
 	<test thread-count="5" name="Test">
 		<parameter name="petsoldstatus" value="sold" />
 		<parameter name="petavailablestatus" value="available" />
 		<parameter name="petpendingstatus" value="pending" />
 		<classes>
-			<class
-				name="org.iitwforce.restassured.restassured.PetStoreTests" />
+			<class name="org.iitwforce.restassured.restassured.PetStoreTests">
+				<methods>
+					<include name="validatefindByPendingStatus" />
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

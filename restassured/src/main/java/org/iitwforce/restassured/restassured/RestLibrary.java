@@ -62,8 +62,7 @@ public class RestLibrary {
 
 	}  
 	
-	public static Response getServiceResponse(String requestURL) 
-			throws Exception 
+	public static Response getServiceResponse(String requestURL) throws Exception 
 	{
 		RequestSpecification request = RestAssured.given();
 		request.headers(provideHeaders());
